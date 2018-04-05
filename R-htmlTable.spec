@@ -4,7 +4,7 @@
 #
 Name     : R-htmlTable
 Version  : 1.11.2
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/htmlTable_1.11.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlTable_1.11.2.tar.gz
 Summary  : Advanced Tables for Markdown/HTML
