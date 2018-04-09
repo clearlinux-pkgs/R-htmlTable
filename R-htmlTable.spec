@@ -4,7 +4,7 @@
 #
 Name     : R-htmlTable
 Version  : 1.11.2
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/htmlTable_1.11.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlTable_1.11.2.tar.gz
 Summary  : Advanced Tables for Markdown/HTML
@@ -45,11 +45,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521179868
+export SOURCE_DATE_EPOCH=1523308246
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521179868
+export SOURCE_DATE_EPOCH=1523308246
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
