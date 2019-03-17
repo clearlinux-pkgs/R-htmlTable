@@ -4,20 +4,19 @@
 #
 Name     : R-htmlTable
 Version  : 1.13.1
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/htmlTable_1.13.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlTable_1.13.1.tar.gz
 Summary  : Advanced Tables for Markdown/HTML
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-checkmate
-Requires: R-htmltools
-Requires: R-htmlwidgets
-Requires: R-reshape
-Requires: R-rstudioapi
+Requires: R-backports
+Requires: R-plyr
+BuildRequires : R-backports
 BuildRequires : R-checkmate
 BuildRequires : R-htmltools
 BuildRequires : R-htmlwidgets
+BuildRequires : R-plyr
 BuildRequires : R-reshape
 BuildRequires : R-rstudioapi
 BuildRequires : buildreq-R
@@ -34,10 +33,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546958136
+export SOURCE_DATE_EPOCH=1552852844
 
 %install
-export SOURCE_DATE_EPOCH=1546958136
+export SOURCE_DATE_EPOCH=1552852844
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -73,8 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library htmlTable|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  htmlTable || :
 
 
 %files
@@ -124,3 +122,19 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/htmlTable/htmlwidgets/lib/table_pagination/table_pagination.js
 /usr/lib64/R/library/htmlTable/javascript/button.js
 /usr/lib64/R/library/htmlTable/javascript/toggler.js
+/usr/lib64/R/library/htmlTable/tests/testInteractive.R
+/usr/lib64/R/library/htmlTable/tests/testthat.R
+/usr/lib64/R/library/htmlTable/tests/testthat/test-htmlTable-dimnames.R
+/usr/lib64/R/library/htmlTable/tests/testthat/test-htmlTable-input_checks.R
+/usr/lib64/R/library/htmlTable/tests/testthat/test-htmlTable.R
+/usr/lib64/R/library/htmlTable/tests/testthat/test-htmlTable_cgroup.R
+/usr/lib64/R/library/htmlTable/tests/testthat/test-htmlTable_dates.R
+/usr/lib64/R/library/htmlTable/tests/testthat/test-htmlTable_rgroup_tspanner.R
+/usr/lib64/R/library/htmlTable/tests/testthat/test-htmlTable_styles.R
+/usr/lib64/R/library/htmlTable/tests/testthat/test-htmlTable_total.R
+/usr/lib64/R/library/htmlTable/tests/testthat/test-interactiveTable.R
+/usr/lib64/R/library/htmlTable/tests/testthat/test-txtFrmt.R
+/usr/lib64/R/library/htmlTable/tests/testthat/test-txtMergeLines.R
+/usr/lib64/R/library/htmlTable/tests/visual_tests/htmlTable_vtests.R
+/usr/lib64/R/library/htmlTable/tests/visual_tests/pandoc_test.Rmd
+/usr/lib64/R/library/htmlTable/tests/visual_tests/word_test.Rmd
