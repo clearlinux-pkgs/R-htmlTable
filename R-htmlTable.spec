@@ -4,21 +4,12 @@
 #
 Name     : R-htmlTable
 Version  : 1.13.1
-Release  : 24
+Release  : 25
 URL      : https://cran.r-project.org/src/contrib/htmlTable_1.13.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlTable_1.13.1.tar.gz
 Summary  : Advanced Tables for Markdown/HTML
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-XML
-Requires: R-dplyr
-Requires: R-glue
-Requires: R-pillar
-Requires: R-pkgconfig
-Requires: R-tibble
-Requires: R-tidyr
-Requires: R-tidyselect
-Requires: R-xfun
 BuildRequires : R-XML
 BuildRequires : R-backports
 BuildRequires : R-checkmate
@@ -51,10 +42,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1556475001
+export SOURCE_DATE_EPOCH=1556475355
 
 %install
-export SOURCE_DATE_EPOCH=1556475001
+export SOURCE_DATE_EPOCH=1556475355
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
