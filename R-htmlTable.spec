@@ -4,23 +4,39 @@
 #
 Name     : R-htmlTable
 Version  : 1.13.1
-Release  : 23
+Release  : 24
 URL      : https://cran.r-project.org/src/contrib/htmlTable_1.13.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlTable_1.13.1.tar.gz
 Summary  : Advanced Tables for Markdown/HTML
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-cli
-Requires: R-withr
+Requires: R-XML
+Requires: R-dplyr
+Requires: R-glue
+Requires: R-pillar
+Requires: R-pkgconfig
+Requires: R-tibble
+Requires: R-tidyr
+Requires: R-tidyselect
+Requires: R-xfun
+BuildRequires : R-XML
 BuildRequires : R-backports
 BuildRequires : R-checkmate
 BuildRequires : R-cli
+BuildRequires : R-dplyr
+BuildRequires : R-glue
 BuildRequires : R-htmltools
 BuildRequires : R-htmlwidgets
+BuildRequires : R-pillar
+BuildRequires : R-pkgconfig
 BuildRequires : R-plyr
 BuildRequires : R-reshape
 BuildRequires : R-rstudioapi
+BuildRequires : R-tibble
+BuildRequires : R-tidyr
+BuildRequires : R-tidyselect
 BuildRequires : R-withr
+BuildRequires : R-xfun
 BuildRequires : buildreq-R
 
 %description
@@ -35,10 +51,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552894181
+export SOURCE_DATE_EPOCH=1556475001
 
 %install
-export SOURCE_DATE_EPOCH=1552894181
+export SOURCE_DATE_EPOCH=1556475001
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -74,7 +90,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  htmlTable || :
+R CMD check --no-manual --no-examples --no-codoc htmlTable || :
 
 
 %files
