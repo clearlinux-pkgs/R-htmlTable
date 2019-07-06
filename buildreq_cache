@@ -12,6 +12,7 @@ R-pkgconfig
 R-plyr
 R-reshape
 R-rstudioapi
+R-stringi
 R-tibble
 R-tidyr
 R-tidyselect
