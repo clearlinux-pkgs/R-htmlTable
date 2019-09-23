@@ -4,47 +4,42 @@
 #
 Name     : R-htmlTable
 Version  : 1.13.1
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/htmlTable_1.13.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlTable_1.13.1.tar.gz
 Summary  : Advanced Tables for Markdown/HTML
 Group    : Development/Tools
 License  : GPL-3.0
+Requires: R-XML
 Requires: R-checkmate
 Requires: R-htmltools
 Requires: R-htmlwidgets
 Requires: R-knitr
 Requires: R-magrittr
+Requires: R-plyr
+Requires: R-reshape
 Requires: R-rstudioapi
-Requires: R-stringi
 Requires: R-stringr
+Requires: R-tidyr
 BuildRequires : R-XML
-BuildRequires : R-backports
 BuildRequires : R-checkmate
-BuildRequires : R-cli
-BuildRequires : R-dplyr
-BuildRequires : R-glue
 BuildRequires : R-htmltools
 BuildRequires : R-htmlwidgets
 BuildRequires : R-knitr
 BuildRequires : R-magrittr
-BuildRequires : R-pillar
-BuildRequires : R-pkgconfig
 BuildRequires : R-plyr
 BuildRequires : R-reshape
 BuildRequires : R-rstudioapi
-BuildRequires : R-stringi
 BuildRequires : R-stringr
-BuildRequires : R-tibble
 BuildRequires : R-tidyr
-BuildRequires : R-tidyselect
-BuildRequires : R-withr
-BuildRequires : R-xfun
 BuildRequires : buildreq-R
 
 %description
-[![Build Status](https://travis-ci.org/gforge/htmlTable.svg?branch=master)](https://travis-ci.org/gforge/htmlTable)
-[![](https://cranlogs.r-pkg.org/badges/htmlTable)](https://cran.r-project.org/package=htmlTable)
+column spanners, table spanners, zebra striping, and more. While allowing
+    advanced layout, the underlying css-structure is simple in order to maximize
+    compatibility with word processors such as 'MS Word' or 'LibreOffice'. The package
+    also contains a few text formatting functions that help outputting text
+    compatible with HTML/LaTeX.
 
 %prep
 %setup -q -c -n htmlTable
@@ -54,10 +49,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562446002
+export SOURCE_DATE_EPOCH=1569219503
 
 %install
-export SOURCE_DATE_EPOCH=1562446002
+export SOURCE_DATE_EPOCH=1569219503
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
