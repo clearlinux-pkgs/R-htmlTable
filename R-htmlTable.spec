@@ -4,7 +4,7 @@
 #
 Name     : R-htmlTable
 Version  : 1.13.2
-Release  : 32
+Release  : 33
 URL      : https://cran.r-project.org/src/contrib/htmlTable_1.13.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlTable_1.13.2.tar.gz
 Summary  : Advanced Tables for Markdown/HTML
@@ -29,6 +29,7 @@ BuildRequires : R-rstudioapi
 BuildRequires : R-stringr
 BuildRequires : R-tidyr
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 [![Build Status](https://travis-ci.org/gforge/htmlTable.svg?branch=master)](https://travis-ci.org/gforge/htmlTable)
@@ -42,10 +43,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569260699
+export SOURCE_DATE_EPOCH=1571843556
 
 %install
-export SOURCE_DATE_EPOCH=1569260699
+export SOURCE_DATE_EPOCH=1571843556
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
