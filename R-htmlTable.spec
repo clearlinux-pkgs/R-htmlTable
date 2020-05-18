@@ -4,7 +4,7 @@
 #
 Name     : R-htmlTable
 Version  : 1.13.3
-Release  : 37
+Release  : 38
 URL      : https://cran.r-project.org/src/contrib/htmlTable_1.13.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlTable_1.13.3.tar.gz
 Summary  : Advanced Tables for Markdown/HTML
@@ -31,26 +31,30 @@ BuildRequires : R-tidyr
 BuildRequires : buildreq-R
 
 %description
-[![Build Status](https://travis-ci.org/gforge/htmlTable.svg?branch=master)](https://travis-ci.org/gforge/htmlTable)
-[![](https://cranlogs.r-pkg.org/badges/htmlTable)](https://cran.r-project.org/package=htmlTable)
+column spanners, table spanners, zebra striping, and more. While allowing
+    advanced layout, the underlying css-structure is simple in order to maximize
+    compatibility with word processors such as 'MS Word' or 'LibreOffice'. The package
+    also contains a few text formatting functions that help outputting text
+    compatible with HTML/LaTeX.
 
 %prep
 %setup -q -c -n htmlTable
+cd %{_builddir}/htmlTable
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1575577808
+export SOURCE_DATE_EPOCH=1589778127
 
 %install
-export SOURCE_DATE_EPOCH=1575577808
+export SOURCE_DATE_EPOCH=1589778127
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
